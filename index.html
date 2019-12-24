@@ -1,0 +1,33 @@
+---
+layout: default
+title: Christi Warren
+projects:
+  - title: Structural Inequality
+    image: https://imgur.com/gYKcunm
+    description: Here is a description of the project.
+    link: https://api.mapbox.com/styles/v1/seawarren/cjvfigabrdmcc1fqxkcedv1z9.html?fresh=true&title=view&access_token=pk.eyJ1Ijoic2Vhd2FycmVuIiwiYSI6ImNqdmZpMHU1YTJ2NDg0M21ldnNqNnd3dHMifQ.3QLGLCf199zlJp7xT3gGKA#11.0/37.794191/-122.146087/0
+  - title: My second project
+    image: http://placehold.it/800x600/060
+    description: Here is another description of the project.
+    link: #
+  - title: My third project
+    image: http://placehold.it/800x600/006
+    description: Here is the last description.
+    link: #
+---
+<div class="row">
+
+  {% for project in page.projects %}
+  <div class="col-6 col-md-4">
+    <div class="card">
+      <img src="{{ project.image }}" class="card-img-top img-fluid d-block" alt="placeholder">
+      <div class="card-body">
+        <h5 class="card-title">{{ project.title }}</h5>
+        <p class="card-text">{{ project.description }}</p>
+        <a href="{{ project.link }}" class="btn btn-dark" target="_blank">Link to Project</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  
+</div>
